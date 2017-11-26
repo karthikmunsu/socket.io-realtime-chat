@@ -5,6 +5,7 @@ var io = require('socket.io')(server);
 var port = process.env.PORT || 3000;
 
 app.use(express.static(__dirname + '/node_modules'));  
+app.use(express.static(__dirname + '/html')); 
 
 app.get('/test', function(req, res) {
 	res.status(200).send('<h1>hello user</h1>');
